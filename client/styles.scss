@@ -1,16 +1,62 @@
 @import 'o-colors/main';
 @import 'components/core/main';
+@import 'o-grid/main';
+@import 'o-typography/main';
 
-/*
-      TODO: delete this comment
+.ft-source {
+  font-size: 12.6px;
+  font-family: MetricWeb;
+  fill: #c3bcb0;
+}
+.y-axis path, line {
+  fill: none;
+  stroke-width: 1.0px;
+  stroke: #c3bcb0;
+}
+.x-axis path, line {
+  fill: none;
+  stroke-width: 1.0px;
+  stroke: #c3bcb0;
+}
 
-      Write your code here - keep it neat!
-      Split logical parts of you project into components e.g.
-
-      /client
-        - /components
-            - /component-name
-                - styles.scss
-                - index.js
-                - template.html
-*/
+.voronoi-lines {
+  fill: none;
+  stroke: #aaa;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  stroke-width: 1.5px;
+}
+.voronoi-hover {
+  stroke: #000;
+}
+.trumpLabel {
+  font-size: 20px;
+  font-family: MetricWeb;
+  fill: #a5526a;
+}
+.focus text {
+  text-anchor: middle;
+  text-shadow: 0 1px 0 #fff1e0, 1px 0 0 #fff1e0, 0 -1px 0 #fff1e0, -1px 0 0 #fff1e0;
+  font-family: MetricWeb;
+  font-size: 20px;
+}
+.voronoi path {
+  fill: none;
+  pointer-events: all;
+}
+.axis {
+	font-size: 18px;
+	font-family: MetricWeb;
+	// color: #c3bcb0;
+	text {
+		fill: #6b6e68;
+	}
+}
+// .x-axis {
+//   font-size: 18px;
+//   font-family: MetricWeb;
+//   stroke: 
+//   text {
+//     fill: #6b6e68;
+//   }
+// }

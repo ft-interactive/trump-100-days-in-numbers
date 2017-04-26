@@ -88,5 +88,10 @@
     "prestart": "npm run clean",
     "start": "nodemon --watch gulpfile.babel.js --exec 'gulp watch'",
     "test": "npm run lint && npm run build"
+  },
+  "dependencies": {
+    "bertha-client": "^2.1.0",
+    "d3": "^4.8.0",
+    "lodash.debounce": "^4.0.8"
   }
 }
