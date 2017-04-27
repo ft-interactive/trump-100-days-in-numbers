@@ -47,17 +47,18 @@ drawLineChart(config.sp500);
 drawLineChart(config.consumer);
 drawLineChart(config.dollar);
 
-///
-window.addEventListener('resize', () => {
-  // debounce(drawLineChart(), 100);
-  debounce(drawLineChart (config.approval),   
-    drawLineChart (config.sp500),
-    drawLineChart (config.consumer),
-    drawLineChart (config.dollar), 100);
-  // debounce(drawLineChart (config.sp500), 100);
-  // debounce(drawLineChart (config.consumer), 100);
-  // debounce(drawLineChart (config.dollar), 100);
-});
+var windowWidth = window.innerWidth;
+d3.select(window)
+  .on("resize", function(){
+    if(window.innerWidth != windowWidth){
+// window.addEventListener('resize', () => {
+      debounce(drawLineChart (config.approval),   
+        drawLineChart (config.sp500),
+        drawLineChart (config.consumer),
+        drawLineChart (config.dollar), 100);
+// });
+    }
+  })
 
 function drawLineChart(config){
 //APPROVAL CHART
