@@ -11,11 +11,11 @@ export default () => ({ // eslint-disable-line
   //       new Date('2016-05-17T17:11:22Z')
   publishedDate: new Date(),
 
-  headline: 'First 100 days by the numbers',
+  headline: 'Trump\'s 100 days: by the numbers',
 
   // summary === standfirst (Summary is what the content API calls it)
-  summary: ' ' +
-           ' ',
+  summary: 'Nine charts that show how the ' +
+           '45th presidency measures up so far',
 
   topic: {
     name: 'Donald Trump',
@@ -38,7 +38,7 @@ export default () => ({ // eslint-disable-line
   // Byline can by a plain string, markdown, or array of authors
   // if array of authors, url is optional
   byline: [
-    { name: 'Lauren Leatherby', url: '/foo/bar' }
+    { name: 'Lauren Leatherby', url: 'https://www.ft.com/lauren-leatherby' }
   ],
 
   // Appears in the HTML <title>

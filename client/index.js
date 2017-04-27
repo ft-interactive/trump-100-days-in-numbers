@@ -47,18 +47,28 @@ drawLineChart(config.sp500);
 drawLineChart(config.consumer);
 drawLineChart(config.dollar);
 
+
+
+
 var windowWidth = window.innerWidth;
 d3.select(window)
   .on("resize", function(){
     if(window.innerWidth != windowWidth){
-// window.addEventListener('resize', () => {
       debounce(drawLineChart (config.approval),   
         drawLineChart (config.sp500),
         drawLineChart (config.consumer),
         drawLineChart (config.dollar), 100);
-// });
     }
   })
+
+// ///OLD
+// window.addEventListener('resize', () => {
+//       debounce(drawLineChart (config.approval),   
+//         drawLineChart (config.sp500),
+//         drawLineChart (config.consumer),
+//         drawLineChart (config.dollar), 100);
+// });
+
 
 function drawLineChart(config){
 //APPROVAL CHART
@@ -99,7 +109,7 @@ function drawLineChart(config){
         }
       });
 
-  d3.tsv(config.data, type, function(error, approvalData) {
+  d3.tsv(config.data, type, function(error, configData) {
     if (error) throw error;
 
     xApproval.domain(d3.extent(days));
@@ -117,7 +127,7 @@ function drawLineChart(config){
     g.append("g")
         .attr("class", "voronoi-lines")
       .selectAll("path")
-      .data(approvalData)
+      .data(configData)
       .enter().append("path")
         .attr("d", function(d) {
           d.line = this;
@@ -147,7 +157,7 @@ function drawLineChart(config){
         .attr("class", "voronoi");
 
     approvalVoronoiGroup.selectAll("path")
-      .data(approvalVoronoi.polygons(d3.merge(approvalData.map(function(d) { return d.values; }))))
+      .data(approvalVoronoi.polygons(d3.merge(configData.map(function(d) { return d.values; }))))
       .enter().append("path")
         .attr("d", function(d) { return d ? "M" + d.join("L") + "Z" : null; })
         .on("mouseover", mouseover)

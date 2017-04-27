@@ -15,43 +15,6 @@
 {% endmarkdown %}
 
 <div class="o-grid-container">
-	    <div class="o-grid-row">
-	        <div data-o-grid-colspan="12">
-            <div class="o-typography-lead">Approval ratings</div>
-            <div class="o-typography-lead--small">Approval ratings of last seven presidents</div>
-	        	<div id="approval-rating-graphic"></div>
-            <div class="ft-source">Source: Gallup</div>
-	        </div>
-	    </div>
-	</div>
-
-
-
-{% markdown %}
-
-{{data.approval|md}}
-
-
-{% endmarkdown %}
-
-<div class="o-grid-container">
-	    <div class="o-grid-row">
-	        <div data-o-grid-colspan="12">
-            <div class="o-typography-lead">S&P 500</div>
-            <div class="o-typography-lead--small">S&P 500 closes for last seven presidents (rebased)</div>
-	        	<div id="sp500-graphic"></div>
-            <div class="ft-source">Source: Google Finance</div>
-	        </div>
-	    </div>
-	</div>
-
-{% markdown %}
-
-{{data.stocks|md}}
-
-{% endmarkdown %}
-
-<div class="o-grid-container">
       <div class="o-grid-row">
           <div data-o-grid-colspan="12">
             <div class="o-typography-lead">Bills signed into law</div>
@@ -515,6 +478,60 @@
 {% markdown %}
 
 {{data.golf|md}}
+
+{% endmarkdown %}
+
+<div class="o-grid-container">
+	    <div class="o-grid-row">
+	        <div data-o-grid-colspan="12">
+            <div class="o-typography-lead">Approval ratings</div>
+            <div class="o-typography-lead--small">Approval ratings of last seven presidents</div>
+	        	<div id="approval-rating-graphic"></div>
+            <div class="ft-source">Source: Gallup</div>
+	        </div>
+	    </div>
+	</div>
+
+
+
+{% markdown %}
+
+{{data.approval|md}}
+
+
+{% endmarkdown %}
+
+<div class="o-grid-container">
+	    <div class="o-grid-row">
+	        <div data-o-grid-colspan="12">
+            <div class="o-typography-lead">S&P 500</div>
+            <div class="o-typography-lead--small">S&P 500 closes for last seven presidents (rebased)</div>
+	        	<div id="sp500-graphic"></div>
+            <div class="ft-source">Source: Google Finance</div>
+	        </div>
+	    </div>
+	</div>
+
+{% markdown %}
+
+{{data.stocks|md}}
+
+{% endmarkdown %}
+
+<div class="o-grid-container">
+      <div class="o-grid-row">
+          <div data-o-grid-colspan="12">
+            <div class="o-typography-lead">Dollar index</div>
+            <div class="o-typography-lead--small">Dollar index for last seven presidents</div>
+            <div id="dollar-graphic"></div>
+            <div class="ft-source">Source: St Louis Federal Reserve Economic Research</div>
+          </div>
+      </div>
+  </div>
+
+{% markdown %}
+
+{{data.dollar|md}}
 
 {% endmarkdown %}
 
@@ -1045,23 +1062,6 @@
 {% markdown %}
 
 {{data.jobs|md}}
-
-{% endmarkdown %}
-
-<div class="o-grid-container">
-      <div class="o-grid-row">
-          <div data-o-grid-colspan="12">
-            <div class="o-typography-lead">Dollar index</div>
-            <div class="o-typography-lead--small">Dollar index for last seven presidents</div>
-            <div id="dollar-graphic"></div>
-            <div class="ft-source">Source: St Louis Federal Reserve Economic Research</div>
-          </div>
-      </div>
-  </div>
-
-{% markdown %}
-
-{{data.dollar|md}}
 
 
 <script src="//origami-build.ft.com/v2/bundles/js?modules=o-grid%40%5E4.0.0"></script>
