@@ -41,25 +41,27 @@ var config = {
 import * as d3 from 'd3';
 import debounce from 'lodash.debounce';
 
-
-drawLineChart(config.approval);
-drawLineChart(config.sp500);
-drawLineChart(config.consumer);
-drawLineChart(config.dollar);
+var windowWidth = null;
 
 
+var options = {};
 
+function drawCharts(){
 
-var windowWidth = window.innerWidth;
-d3.select(window)
-  .on("resize", function(){
-    if(window.innerWidth != windowWidth){
-      debounce(drawLineChart (config.approval),   
-        drawLineChart (config.sp500),
-        drawLineChart (config.consumer),
-        drawLineChart (config.dollar), 100);
+    if(window.innerWidth != windowWidth || windowWidth === null){
+      drawLineChart (config.approval);   
+        drawLineChart (config.sp500);
+        drawLineChart (config.consumer);
+        drawLineChart (config.dollar);
+        windowWidth = window.innerWidth;
     }
-  })
+
+}
+
+
+drawCharts()
+
+  window.addEventListener('resize', debounce(drawCharts, 100));
 
 // ///OLD
 // window.addEventListener('resize', () => {

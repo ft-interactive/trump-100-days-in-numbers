@@ -1,15 +1,15 @@
 export default () => ({ // eslint-disable-line
 
   // link file UUID
-  id: '',
+  id: '9b87da1e-2c51-11e7-9ec8-168383da43b7',
 
   // canonical URL of the published page
   // https://ig.ft.com/100-days get filled in by the ./configure script
-  url: 'https://ig.ft.com/100-days',
+  url: 'https://ig.ft.com/100-days-in-numbers/',
 
   // To set an exact publish date do this:
   //       new Date('2016-05-17T17:11:22Z')
-  publishedDate: new Date(),
+  publishedDate: new Date('2017-04-29T05:00:00Z'),
 
   headline: 'Trump\'s 100 days: by the numbers',
 
@@ -42,10 +42,10 @@ export default () => ({ // eslint-disable-line
   ],
 
   // Appears in the HTML <title>
-  title: '',
+  title: 'Trump\'s 100 days: by the numbers',
 
   // meta data
-  description: '',
+  description: 'Nine charts that show how the 45th presidency measures up so far',
 
   /*
   TODO: Select Twitter card type -
@@ -54,26 +54,26 @@ export default () => ({ // eslint-disable-line
         Twitter card docs:
         https://dev.twitter.com/cards/markup
   */
-  twitterCard: 'summary',
+  twitterCard: 'summary_large_image',
 
   /*
   TODO: Do you want to tweak any of the
         optional social meta data?
   */
   // General social
-  // socialImage: '',
-  // socialHeadline: '',
-  // socialSummary:  '',
+  socialImage: 'https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fim.ft-static.com%2Fcontent%2Fimages%2Fac18d062-2c3e-11e7-bc4b-5528796fe35c.img?source=ig&width=1200',
+  socialHeadline: 'Donald Trump’s first 100 days',
+  socialSummary:  'Donald Trump’s first 100 days: 9 charts that show how his presidency measures up so far',
 
   // TWITTER
-  // twitterImage: '',
+  twitterImage: 'https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fim.ft-static.com%2Fcontent%2Fimages%2Fac18d062-2c3e-11e7-bc4b-5528796fe35c.img?source=ig&width=1200',
   // twitterCreator: '@individual's_account',
-  // tweetText:  '',
-  // twitterHeadline:  '',
+  tweetText:  'Donald Trump’s first 100 days: 9 charts that show how his presidency measures up so far',
+  twitterHeadline:  'Donald Trump’s first 100 days',
 
   // FACEBOOK
-  // facebookImage: '',
-  // facebookHeadline: '',
+  facebookImage: 'https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fim.ft-static.com%2Fcontent%2Fimages%2Fac18d062-2c3e-11e7-bc4b-5528796fe35c.img?source=ig&width=1200',
+  facebookHeadline: 'Donald Trump’s first 100 days',
 
   tracking: {
 
